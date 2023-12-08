@@ -9,45 +9,65 @@ public class Exercicio4 {
         System.out.println("2 - Retângulo");
         System.out.println("3 - Circulo");
         System.out.println("4 - Trapézio");
+        int formaSelecionada = scanner.nextInt();
 
-        int forma = scanner.nextInt();
+        String nomeFormaGeometrica = null;
         double area = 0;
 
-        switch (forma){
+        switch (formaSelecionada){
             case 1:
-                System.out.println("Insira a base: ");
-                double base = scanner.nextDouble();
-                System.out.println("Insira a altura: ");
-                double altura = scanner.nextDouble();
+                nomeFormaGeometrica = "triângulo";
 
-                area = (base * altura) / 2;
+                System.out.println("Insira a base: ");
+                double baseTriangulo = scanner.nextDouble();
+
+                System.out.println("Insira a altura: ");
+                double alturaTriangulo = scanner.nextDouble();
+
+                area = (baseTriangulo * alturaTriangulo) / 2;
+                break;
 
             case 2:
-                System.out.println("Insira a base: ");
-                base = scanner.nextDouble();
-                System.out.println("Insira a altura: ");
-                altura = scanner.nextDouble();
+                nomeFormaGeometrica = "retângulo";
 
-                area = base * altura;
+                System.out.println("Insira a base: ");
+                double baseRetangulo = scanner.nextDouble();
+
+                System.out.println("Insira a altura: ");
+                double alturaRetangulo = scanner.nextDouble();
+
+                area = baseRetangulo * alturaRetangulo;
+                break;
 
             case 3:
+                nomeFormaGeometrica = "circulo";
+
                 System.out.println("Insira o raio: ");
                 double raio = scanner.nextDouble();
 
                 area = Math.PI * Math.pow(raio, 2);
+                break;
 
             case 4:
-                System.out.println("Insira a base maior: ");
-                double baseMaior = scanner.nextDouble();
-                System.out.println("Insira a base menor: ");
-                double baseMenor = scanner.nextDouble();
-                System.out.println("Insira a altura: ");
-                altura = scanner.nextDouble();
+                nomeFormaGeometrica = "trapezio";
 
-                area = (baseMaior + baseMenor) * altura * 0.5;
+                System.out.println("Insira a base maior: ");
+                double baseMaiorTrapezio = scanner.nextDouble();
+
+                System.out.println("Insira a base menor: ");
+                double baseMenorTrapezio = scanner.nextDouble();
+
+                System.out.println("Insira a altura: ");
+                double alturaTrapezio = scanner.nextDouble();
+
+                area = ((baseMaiorTrapezio + baseMenorTrapezio) * alturaTrapezio)/2;
+                break;
+
+            default:
+                System.out.println("Opção inválida.");
         }
 
-        System.out.println("Area: " + area);
+        System.out.printf("Area do %s: %.2f %n", nomeFormaGeometrica, area);
 
 
     }

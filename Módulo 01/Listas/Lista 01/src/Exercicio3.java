@@ -45,12 +45,12 @@ public class Exercicio3 {
         System.out.println("Módulo 01: ");
         System.out.println("Ano atual da missão: " + anoMissao);
         System.out.println("Quantidade de funcionários envolvidos: " + numFuncionarios);
-	    System.out.println();
+        System.out.println();
 
         System.out.println("Módulo 02: ");
         System.out.println("Distância que o satélite ficará da terra: " + distanciaDaTerra);
         System.out.println("Velocidade máxima: " + velMaxima);
-	    System.out.println();
+        System.out.println();
 
         System.out.println("Módulo 03: ");
         System.out.println("Estado da missao: " + estadoMissao);

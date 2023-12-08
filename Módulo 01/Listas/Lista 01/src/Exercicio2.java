@@ -26,7 +26,7 @@ public class Exercicio2 {
         System.out.printf("Nome: %s %n", nome);
         System.out.printf("Salário: R$ %.2f %n", salario);
         System.out.printf("Idade: %d anos %n", idade);
-        System.out.printf("Altura: %.2f m %n", altura);
+        System.out.printf("Altura: %.2fm %n", altura);
         System.out.printf("Sexo: %s %n", sexo);
     }
 }
