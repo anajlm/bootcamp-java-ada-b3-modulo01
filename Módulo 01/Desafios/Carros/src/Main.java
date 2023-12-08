@@ -34,46 +34,41 @@ public class Main {
     // - Não existe velocidade negativa
 
     public static void main(String[] args) {
-        // métodos static não precisam da instanciacao de um objeto e podem ser utilizados diretamente nas classes
-        Calculadora.somar(1, 2);
-
-
         Scanner entrada = new Scanner(System.in);
 
         // new - criamos um objeto
-        Carro carroDevas = new Carro();
-        carroDevas.cor = "Azul";
-        carroDevas.marca = "Ferrari";
-        carroDevas.modelo = "296 GTB";
-        carroDevas.ligado = true;
-        carroDevas.velocidade = 0;
-
-        Carro carroDoIgor = new Carro();
-        carroDoIgor.cor = "Azul";
-        carroDoIgor.marca = "Fiat";
-        carroDoIgor.modelo = "Mobi";
-        carroDoIgor.ligado = true;
-        carroDoIgor.velocidade = 0;
+        Carro carro = new Carro();
+        carro.cor = "Azul";
+        carro.marca = "Ferrari";
+        carro.modelo = "296 GTB";
+        carro.ligado = true;
+        carro.velocidade = 0;
 
         int escolha;
 
-        while(carroDevas.ligado) { // Enquanto meu carro estiver ligado ->
+        while(carro.ligado) { // Enquanto meu carro estiver ligado ->
             mostrarMenu();
             escolha = entrada.nextInt(); // Entrada do usuario
 
-            if(escolha == 1) {
-                carroDevas.acelerar(10);
-            } else if(escolha == 2) {
-                carroDevas.frear();
-            } else if(escolha == 3) {
-                carroDevas.mostrarEstadoAtual();
-            } else if(escolha == 0) {
-                // TODO: Implementar metodo desligar
-                System.out.println("Voce desligou o carro!");
-                carroDevas.ligado = false;
-            } else {
-                System.out.println("Escolha invalida, tente novamente");
+
+            switch (escolha){
+                case 0:
+                    carro.desligar();
+                    break;
+                case 1:
+                    carro.acelerar();
+                    break;
+                case 2:
+                    carro.frear();
+                    break;
+                case 3:
+                    carro.mostrarEstadoAtual();
+                    break;
+                default:
+                    System.out.println("Opção inválida");
+
             }
+
         }
 
         entrada.close();

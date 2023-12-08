@@ -1,21 +1,53 @@
-// Domain
+
 public class Carro {
-    // Atributos
     String cor;
     String marca;
     String modelo;
     boolean ligado;
     int velocidade;
 
-    // Acoes
-    public void acelerar(int velocidade) {
-        this.velocidade += velocidade;
-        System.out.println("Voce accelerator e a velocidade atual é: " + this.velocidade);
+    public void desligar() {
+        if (this.ligado && this.velocidade == 0) {
+            this.ligado = false;
+            System.out.println("Voce desligou o carro!");
+            return;
+        }
+        System.out.println("Não foi possível desligar, freie totalmente.");
+    }
+
+    public void ligar(){
+
+        if(!this.ligado){
+            this.ligado = true;
+        }
+    }
+
+    public void acelerar() {
+
+        if(this.ligado) {
+            if (this.velocidade + 10 > 100) {
+                this.velocidade = 100;
+                System.out.println("Não é possível acelerar mais.");
+                return;
+            }
+            this.velocidade += 10;
+            System.out.println("Voce acelerou e a velocidade atual é: " + this.velocidade);
+        }
+
     }
 
     public void frear() {
-        this.velocidade -= 10;
-        System.out.println("Voce freou e a velocidade atual é: " + this.velocidade);
+
+        if(this.ligado) {
+            if (this.velocidade - 10 < 0) {
+                this.velocidade = 0;
+                System.out.println("Não é possível frear mais.");
+                return;
+            }
+            this.velocidade -= 10;
+            System.out.println("Voce freou e a velocidade atual é: " + this.velocidade);
+        }
+
     }
 
     public void mostrarEstadoAtual() {

@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 public class Exercicio2 {
 
+    /**
+     * Escreva um programa que captura nome, salário, idade, altura e
+     * sexo. Mostre na tela utilizando o printf.
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
