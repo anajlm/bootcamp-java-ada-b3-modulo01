@@ -1,12 +1,6 @@
 import java.util.Scanner;
 
 public class Exercicio4 {
-
-    /**
-     * Faça um programa que calcula a área das seguites figuras
-     * geometricas - Retângulo, Triângulo, Círculo e Trapézio.
-     */
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

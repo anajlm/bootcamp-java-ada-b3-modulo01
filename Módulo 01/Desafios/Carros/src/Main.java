@@ -1,4 +1,3 @@
-import calculadora.Calculadora;
 
 import java.util.Scanner;
 
@@ -37,16 +36,11 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
         // new - criamos um objeto
-        Carro carro = new Carro();
-        carro.cor = "Azul";
-        carro.marca = "Ferrari";
-        carro.modelo = "296 GTB";
-        carro.ligado = true;
-        carro.velocidade = 0;
+        Carro carro = new Carro("Azul", "Ferrari", "296 GTB");
 
         int escolha;
 
-        while(carro.ligado) { // Enquanto meu carro estiver ligado ->
+        while(carro.isLigado()) { // Enquanto meu carro estiver ligado ->
             mostrarMenu();
             escolha = entrada.nextInt(); // Entrada do usuario
 

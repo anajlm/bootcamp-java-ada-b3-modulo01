@@ -1,10 +1,59 @@
 
 public class Carro {
-    String cor;
-    String marca;
-    String modelo;
-    boolean ligado;
-    int velocidade;
+    private String cor;
+    private String marca;
+    private String modelo;
+    private Boolean ligado;
+    private Integer velocidade;
+
+    public Carro(){
+        this.ligado = true;
+        this.velocidade = 0;
+    }
+
+    public Carro(String cor, String marca, String modelo){
+        this.cor = cor;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ligado = true;
+        this.velocidade = 0;
+    }
+
+    // Getters
+
+    public String getCor(){
+        return this.cor;
+    }
+
+    public String getMarca(){
+        return this.marca;
+    }
+
+    public String getModelo(){
+        return this.modelo;
+    }
+
+    public Boolean isLigado(){
+        return this.ligado;
+    }
+
+    public Integer getVelocidade(){
+        return velocidade;
+    }
+
+    // Setters
+
+    public void setCor(String cor){
+        this.cor = cor;
+    }
+
+    public void setMarca(String marca){
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo){
+        this.modelo = modelo;
+    }
 
     public void desligar() {
         if (this.ligado && this.velocidade == 0) {
@@ -16,7 +65,6 @@ public class Carro {
     }
 
     public void ligar(){
-
         if(!this.ligado){
             this.ligado = true;
         }
